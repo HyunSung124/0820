@@ -1,0 +1,74 @@
+#소트인사이드
+#
+# def bubble_sort(_list:list,reverse = False):
+#     if reverse:
+#         for i in range(len(_list)-1):
+#             for j in range(len(_list)-1 -i):
+#                 if _list[j] < _list[j+1]:
+#                     tmp = _list[j]
+#                     _list[j] = _list[j+1]
+#                     _list[j+1] = tmp
+#
+#     else:
+#         for i in range(len(_list)-1):
+#             for j in range(len(_list)-1 -i):
+#                 if _list[j] > _list[j+1]:
+#                     tmp = _list[j]
+#                     _list[j] = _list[j+1]
+#                     _list[j+1] = tmp
+#
+# a = list(input())           #입력받은 문자열을 리스트로 변경
+# for i in range(len(a)):     #리스트의 원소들을 정수로 변환
+#     a[i] = int(a[i])
+#
+# bubble_sort(a,reverse=True) #버블정렬 실행(내림차순)
+# for i in a:                 #원소들을 붙혀서 출력
+#     print(i,end = '')
+
+
+
+#K번째수
+# def solution(array, commands):
+#     i, j, k = [], [], []
+#     answer = []
+#
+#     for x in range(len(commands)):
+#         i.append(commands[x][0])
+#         j.append(commands[x][1])
+#         k.append(commands[x][2])
+#
+#     for y in range(len(commands)):
+#         parts = array[i[y]-1: j[y]]
+#         parts.sort()
+#         answer.append(parts[k[y]-1])
+#
+#     return answer
+# array = [1, 5, 2, 6, 3, 7, 4]
+# commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+#
+# print(solution(array,commands))
+
+
+
+
+#H-Index
+# def solution(citations):
+#     answer = 0
+#     citations.sort()
+# 
+#     for h in range(1,len(citations)+1):
+#         cnt_h = 0       #h번 이상인 논문의 개수
+#         cnt_l = 0       #h번 이하인 논문의 개수
+#         for i in citations:
+#             if i >= h:
+#                 cnt_h += 1
+#             elif i <= h:
+#                 cnt_l += 1
+#             if cnt_h >= h and cnt_l <= h and answer < h:
+#                 answer = h
+# 
+# 
+#     return answer
+# 
+# c = [3, 0, 6, 1, 5]
+# print(solution(c))
